@@ -92,7 +92,7 @@
 							</a>
 						</li>
 					</ul>
-					<p class="copyright text-muted">Copyright &copy; Your Website 2020</p>
+					<p class="copyright text-muted">Copyright &copy; <span id="copyright"></span></p>
 				</div>
 			</div>
 		</div>
@@ -103,7 +103,11 @@
 	<script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 	
 	<!-- Custom scripts for this template -->
-	<script src="{{ url_for('static', filename='js/clean-blog.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/clean-blog.min.js') }}"></script>
+    
+    <script>
+        $('#copyright').text(new Date().getFullYear());
+    </script>
 
 </body>
 </html>
