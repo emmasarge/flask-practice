@@ -15,6 +15,17 @@ def about():
         data = json.load(json_data)
     return render_template("about.html", page_title="About", company=data)
 
+@app.route("/about/<products_name>")
+def about_products(products_name):
+    products = {}
+    with open("data/company.json", "r") as json_data:
+        data = json.load(json_data)
+        for obj in data:
+            if obj["url"] == products_name:
+                products = obj
+    return render_template("products.html", products=products)
+
+
 @app.route("/contact")
 def contact():
     return render_template("contact.html", page_title="Contact")

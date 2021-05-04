@@ -1,21 +1,25 @@
 [{
         "product": "Product Collection",
         "description": "Many products can call themselves organic but that does not mean that they are 100% organic. In fact, very few products are 100% as they usually contain water and often non-organic ingredients such as synthetic fragrance, which is a common skin and respiratory irritant. At Thistle Fields all our products are certified by UK certifying body The Soil Association.",
-        "image_source": "https://www.bartlett.com/images/badge_organic-and-natural.png"
+        "image_source": "https://www.bartlett.com/images/badge_organic-and-natural.png",
+        "url":"product"
     },
     {
         "product": "Lavender Kitchen Spray",
         "description": "A naturally aggressive anti-bacterial spray to tackle kitchen grease and germs",
-        "image_source": "https://suppliesforcandles.co.uk/980-medium_default/lavender-fragrance-oil.webp"
+        "image_source": "https://suppliesforcandles.co.uk/980-medium_default/lavender-fragrance-oil.webp",
+        "url":"lavender"
     },
     {
         "product": "Basil Bathroom Cleaner",
         "description": "Basil and Oregono's anti-microbrial properties make this an ideal product to maintain a clean and fresh bathroom.",
-        "image_source": "https://www.veritable-garden.com/184-large_default/organic-sweet-basil-lingot.jpg"
+        "image_source": "https://www.veritable-garden.com/184-large_default/organic-sweet-basil-lingot.jpg",
+        "url":"basil"
     },
     {
         "product": "Eucalyptus Porcelein Polish",
         "description": "A fresh and cleanly scented polish for baths, sinks and toilets.",
-        "image_source": "https://www.gardeningknowhow.com/wp-content/uploads/2019/12/eucalyptus.jpg"
+        "image_source": "https://www.gardeningknowhow.com/wp-content/uploads/2019/12/eucalyptus.jpg",
+        "url":"eucalyptus"
     }
 ]
