@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 {% block content %}
-<h2>About</h2>
+
+
+<h2>{{ page_title }}</h2>
 <p>
     The Soil Association is the only UK charity that works across the spectrum of human health, the environment and
     animal welfare. Its organic certification is widely regarded as the gold standard for all organic products and is
@@ -11,29 +13,32 @@
     All Thistle Fields products are free from harsh chemicals, nano particles, parabens, synthetic dyes and artificial
     fragrances.
 </p>
-<div class="row featurette">
-    <div class="col-md-7">
-        <h3>Our Products are Organic</h3>
-        <p>Many products can call themselves organic but that does not mean that they are 100% organic. In fact, very
-            few products are 100% as they usually contain water and often non-organic ingredients such as synthetic
-            fragrance, which is a common skin and respiratory irritant.<br>
 
-            At Thistle Fields all our products are certified by UK certifying body, The Soil Association, which means that
-            our workshop is regularly inspected, all our ingredients are approved by them as well as what we put on our
-            labels and in our marketing material. You will find that other products may be certified by another body
-            such as Ecocert who do not have such stringent conditions.</p>
-    </div>
-    <div class="col-md-5">
-        <img src="https://www.bartlett.com/images/badge_organic-and-natural.png" alt="organic certificate for thistle fields">
-    </div>
-</div>
+{% for products in company %}
+
 <div class="row featurette">
-    <div class="col-md-5">
-        <img src="https://greenscents.co.uk/wp-content/uploads/2018/08/leave.png" alt="eucalyptus natural cleaning ingredient thistle fields">
-    </div>
-    <div class="col-md-7">
-        <h3>Ingredients</h3>
-        <p>Each product in the Thistle Fields range is certified organic by The Soil Association and contains more than 70% certified organic ingredients. Other ingredients are sourced from a restricted natural palette that are all approved by The Soil Association.</p>
-    </div>
+    {% if loop.index % 2 != 0 %}
+        <div class="col-md-7">
+            <h3>{{ loop.index }}. {{ products.product }}</h3>
+            <p>{{ products.description }}</p>
+        </div>
+        <div class="col-md-5">
+            <img src="{{ products.image_source }}" alt="" class="featurette-image image-responsive">
+        </div>
+    {% else %}
+        <div class="col-md-5">
+            <img src="{{ products.image_source }}" alt="" class="featurette-image image-responsive">
+        </div>
+        <div class="col-md-7">
+            <h3> {{ loop.index }}. {{ products.product }}</h3>
+            <p> {{ products.description }} </p>
+        </div>
+    {% endif %}
 </div>
+        {% if loop.index != 4 %}
+            <hr class="featurette-divider">
+        {% endif %}
+
+
+    {% endfor %}
 {% endblock %}
