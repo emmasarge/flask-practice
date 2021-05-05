@@ -1,6 +1,14 @@
 
 {% extends "base.html" %} 
 {% block content %}
-   <h2>Home Page</h2>
+   <h2>Organic and Natural Products to Clean Your Home Safely</h2>
+   <div class="row featurette">
+       <div class="col-md-6">
+           <p>Thistle Fields promises the most natural and harmonizing cleaning products for your home. With all natural ingredients, you are rest assured your curious loved ones are safe when using these products. We source our ingredients from organic and ethical farms, as local as possible to reduce further chemical emissions in the production of our cleaning supplies. Each product has its own combination of complementary ingredients to provide strong cleaning results. The plant-based ingredients are also lightly fragranced with essential oils for a pleasant cleaning experience. </p>
+       </div>
+       <div class="col-md-6">
+           <img src= "url('{{ url_for('static', filename='img/clean.jpg') }}')" class="featurette-image image-responsive">
+       </div>
+   </div>
 {% endblock %}
 
