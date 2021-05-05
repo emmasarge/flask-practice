@@ -1,7 +1,7 @@
 import os
 import json
 from flask import Flask, render_template, request, flash
-if os.path.exists("env.py"): 
+if os.path.exists("env.py"):
     import env
 
 app = Flask(__name__)
@@ -49,4 +49,4 @@ if __name__ == "__main__":
         host= os.environ.get("IP", "0.0.0.0"),
         port= int(os.environ.get("GET", "5000")),
         debug=False
-    )
+        )
